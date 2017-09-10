@@ -401,7 +401,9 @@ cleanup ( ) {
 }
 
 mode_install_dependencies ( ) {
-  apt-get install zipalign lib32stdc++6 lib32ncurses5 lib32z1 android-sdk metasploit-framework apache2
+  apt-get install lib32stdc++6 lib32ncurses5 lib32z1 
+  apt-get install android-sdk metasploit-framework apache2 zipalign
+  
 }
 
 ## Main Activity:
