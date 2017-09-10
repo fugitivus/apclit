@@ -12,8 +12,11 @@
 Tested under KaliLinux2
 
 "install" with:
+apt-get install make git
 git clone https://github.com/fugitivus/apclit
 cd apclit
 chmod 775 apclit
+
+Start with:
 ./apclit --install-dependencies
 ./apclit --help
