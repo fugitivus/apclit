@@ -1,6 +1,7 @@
  APCLIT - Android Payload Creation & LAME Injection Toolkit  <br>
-     (c) 2016 - 2017 by fugitivus (fugitivus@gmx.de)         <br>
-            use for educational purposes only                <br>
+ (c) 2016 - 2017 by fugitivus (fugitivus@gmx.de)         <br>
+ Licensed under: GNU General Public License, Version 3 <br>
+ use for educational purposes only                <br>
 <br>
 Tested under KaliLinux2<br>
 <br>
