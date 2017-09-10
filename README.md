@@ -6,8 +6,11 @@
 Tested under KaliLinux2<br>
 <br>
 "install" with:<br>
+apt-get install make git<br>
 git clone https://github.com/fugitivus/apclit<br>
 cd apclit<br>
 chmod 775 apclit<br>
+<br>
+Start with:<br>
 ./apclit --install-dependencies<br>
 ./apclit --help<br>
