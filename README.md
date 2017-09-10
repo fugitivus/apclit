@@ -1,3 +1,4 @@
+<tt>
  _______   _______   _______   ___       ___   ____________  <br> 
 |   _   | |  ___  | |   ____| |   |     |   | |            | <br>
 |  | |  | | |   | | |  |      |   |     |   | |__     _____| <br>
@@ -8,7 +9,7 @@
  APCLIT - Android Payload Creation & LAME Injection Toolkit  <br>
      (c) 2016 - 2017 by fugitivus (fugitivus@gmx.de)         <br>
             use for educational purposes only                <br>
-<br>
+</tt><br>
 Tested under KaliLinux2<br>
 <br>
 "install" with:<br>
