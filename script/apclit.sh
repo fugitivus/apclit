@@ -466,6 +466,49 @@ mode_setup ( ) {
   apclit_setup;
 }
 
+start_web_server ( ) {
+  fIndex=30;
+  wString="";
+  templateFile="web-template.html";
+  indexFile="../output/index.html";
+  apclitSrv="../output/apclitSrv.sh";
+  apclitSrvPort="80";
+
+  print_step;
+  echo "Generating index.html from web-template...";
+  cp $templateFile $indexFile;
+
+  #adding output files to web template:
+  for file in "../output/"*.apk ; do 
+    print_step;
+    echo "Add file: "$file" to index.html";
+    fileTmp=$(echo $file | cut -d/ -f3 );
+    wString="<a href=\"$fileTmp\">$fileTmp</a><br>\n";
+    sed -i -e "$fIndex"c"$wString" $indexFile;
+    fIndex=`expr $fIndex + 1`;
+  done
+
+  #generating SimpleHttpServer-Script:
+  print_step;
+  echo "Starting Apclit-Web-Server on Port: "$apclitSrvPort;
+  echo "python -m SimpleHTTPServer "$apclitSrvPort > $apclitSrv;
+
+  #net ready yet...
+  cd ../output
+  sh apclitSrv.sh &
+}
+
+stop_web_server ( ) {
+  print_step;
+  echo "Stopping APCLIT-Web-Server..."
+  kill $(ps x |grep SimpleHTTPServer | cut -d? -f1) 2> /dev/null;
+}
+
+restart_web_server ( ) {
+  stop_web_server
+  start_web_server
+}
+
 #print help banner & show usage:
 print_help ( ) {
   print_banner;
@@ -479,7 +522,10 @@ print_help ( ) {
   echo $col_n' --create-keystore       -->  create new android-keystore for signing (*.apk)';
   echo $col_n' --check-dependencies    -->  check if all dependencies are installed.';
   echo $col_n' --install-dependencies  -->  install all dependencies (kali-linux-only)';
-  echo '\n';
+  echo $col_n' --start-web-share       -->  start web-server 4 sharing (*.apk)';
+  echo $col_n' --stop-web-share        -->  stop web-server 4 sharing (*.apk)';
+  echo $col_n' --restart-web-share     -->  restart web-server 4 sharing (*.apk)';
+echo '\n';
 }
 
 # check for parameters and choose mode:
@@ -491,6 +537,10 @@ case $mode in
   "--create-keystore") mode_create_keystore ;;
   "--check-dependencies") echo "check-dependencies n/a...";;
   "--install-dependencies") mode_install_dependencies ;;
+  "--start-web-share") start_web_server ;;
+  "--stop-web-share") stop_web_server ;;
+  "--restart-web-share") restart_web_server ;;
+  
   *) print_help ;;
 esac
 
