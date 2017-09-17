@@ -482,10 +482,9 @@ start_web_server ( ) {
   for file in "output/"*.apk ; do 
     print_step;
     echo "Add file: "$file" to index.html";
-    echo $file;
+    #echo $file;
     fileTmp=$(echo $file | cut -d/ -f2 );
-    echo $fileTmp;
-
+    #echo $fileTmp;
     wString="<a href=\"$fileTmp\">$fileTmp</a><br>\n";
     sed -i -e "$fIndex"c"$wString" $indexFile;
     fIndex=`expr $fIndex + 1`;
