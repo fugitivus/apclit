@@ -469,9 +469,9 @@ mode_setup ( ) {
 start_web_server ( ) {
   fIndex=30;
   wString="";
-  templateFile="web-template.html";
-  indexFile="../output/index.html";
-  apclitSrv="../output/apclitSrv.sh";
+  templateFile="script/web-template.html";
+  indexFile="output/index.html";
+  apclitSrv="output/apclitSrv.sh";
   apclitSrvPort="80";
 
   print_step;
@@ -479,10 +479,13 @@ start_web_server ( ) {
   cp $templateFile $indexFile;
 
   #adding output files to web template:
-  for file in "../output/"*.apk ; do 
+  for file in "output/"*.apk ; do 
     print_step;
     echo "Add file: "$file" to index.html";
-    fileTmp=$(echo $file | cut -d/ -f3 );
+    echo $file;
+    fileTmp=$(echo $file | cut -d/ -f2 );
+    echo $fileTmp;
+
     wString="<a href=\"$fileTmp\">$fileTmp</a><br>\n";
     sed -i -e "$fIndex"c"$wString" $indexFile;
     fIndex=`expr $fIndex + 1`;
@@ -494,7 +497,7 @@ start_web_server ( ) {
   echo "python -m SimpleHTTPServer "$apclitSrvPort > $apclitSrv;
 
   #net ready yet...
-  cd ../output
+  cd output
   sh apclitSrv.sh &
 }
 
