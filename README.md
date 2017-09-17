@@ -7,21 +7,20 @@
 |   _   | |   |     |       | |       | |   |    |   | |   |
 |__| |__| |___|     |_______| |_______| |___|    |___| |___|
 
+APCLIT - Android Payload Creation & LAME Injection Toolkit
+(c) 2016 - 2017 by fugitivus (fugitivus@gmx.de)
+Licensed under: GNU General Public License, Version 3
+use for educational purposes only
 
-APCLIT - Android Payload Creation & LAME Injection Toolkit  <br>
-(c) 2016 - 2017 by fugitivus (fugitivus@gmx.de)         <br>
-Licensed under: GNU General Public License, Version 3 <br>
-use for educational purposes only                <br>
+Tested under KaliLinux2
 
-Tested under KaliLinux2<br>
+"install" with:
+apt-get install make git
+git clone https://github.com/fugitivus/apclit
+cd apclit
+chmod 775 apclit
 
-"install" with:<br>
-apt-get install make git<br>
-git clone https://github.com/fugitivus/apclit<br>
-cd apclit<br>
-chmod 775 apclit<br>
-<br>
-Start with:<br>
-./apclit --install-dependencies<br>
-./apclit --help<br>
+Start with:
+./apclit --install-dependencies
+./apclit --help
 </pre>
