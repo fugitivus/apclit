@@ -402,7 +402,7 @@ cleanup ( ) {
 
 mode_install_dependencies ( ) {
   #apt-get install lib32stdc++6 lib32ncurses5 lib32z1 
-  apt-get install android-sdk metasploit-framework apache2 zipalign default-jdk apktool
+  apt-get install android-sdk metasploit-framework zipalign default-jdk apktool
 }
 
 ## Main Activity:
