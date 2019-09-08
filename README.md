@@ -8,7 +8,7 @@
 |__| |__| |___|     |_______| |_______| |___|    |___| |___|
 
 APCLIT - Android Payload Creation & LAME Injection Toolkit
-(c) 2016 - 2017 by fugitivus (fugitivus@gmx.de)
+(c) 2016 - 2019 by fugitivus (fugitivus@gmx.de)
 Licensed under: GNU General Public License, Version 3
 use for educational purposes only
 
