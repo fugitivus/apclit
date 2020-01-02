@@ -1,4 +1,4 @@
-<pre>
+
 ###  _______   _______   _______   ___       ___   ____________ 
 ### |   _   | |  ___  | |   ____| |   |     |   | |            |
 ### |  | |  | | |   | | |  |      |   |     |   | |__     _____|
@@ -14,16 +14,16 @@ use for educational purposes only
 
 Tested under KaliLinux2
 
-"install" with:
+# "install" with:
 apt-get install make git
 git clone https://github.com/fugitivus/apclit
 cd apclit
 chmod 775 apclit
 
-Start with:
+# Start with:
 ./apclit --install-dependencies
 ./apclit --help
-</pre>
+
 
 ### LEGAL DISCLAIMER
 This Repository contains materials that can be potentially damaging or dangerous.
