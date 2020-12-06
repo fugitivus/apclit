@@ -40,7 +40,7 @@ print_banner ( ) {
   echo $col_r"|   _   |"$col_b" |   |     |       | |       | |   |    |   | |   |  ";
   echo $col_r"|__| |__|"$col_b" |___|     |_______| |_______| |___|    |___| |___|  "$col_g;
   echo " APCLIT - Android Payload Creation & LAME Injection Toolkit ";
-  echo "     (c) 2016 - 2019 by fugitivus $col_y(fugitivus@gmx.de)  \n\n"$col_n;
+  echo "     (c) 2016 - 2019 by fugitivus $col_y(fugitivus@gmx.net)  \n\n"$col_n;
 }
 
 print_ok ( ) {
